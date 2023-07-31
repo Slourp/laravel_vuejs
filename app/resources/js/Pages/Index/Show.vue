@@ -1,12 +1,14 @@
-<script setup lang="ts">
-import MainLayout from "@/Layouts/MainLayout.vue";
-import { Link } from "@inertiajs/vue3";
+<template>
+    <h1>Show page !</h1>
+</template>
 
+<script setup lang="ts">
 console.log("Page - Index");
 </script>
 
-<template>
-    <MainLayout>
-        <h1>Show page !</h1>
-    </MainLayout>
-</template>
+<script lang="ts">
+import MainLayout from "@/Layouts/MainLayout.vue";
+export default {
+    layout: MainLayout,
+};
+</script>
