@@ -20,7 +20,6 @@ class ForceHttpsServiceProvider extends ServiceProvider
     public function boot()
     {
         $envsWithHttps = ['production', 'local', 'dev'];
-
         if (in_array(config('app.env'), $envsWithHttps)) $this->app['request']->server->set('HTTPS', true);
     }
 }

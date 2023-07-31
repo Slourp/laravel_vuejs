@@ -5,8 +5,9 @@ import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 
 const resolvePage = async (name: string): Promise<DefineComponent> => {
     const page = await resolvePageComponent<DefineComponent>(
-        `../views/Pages/${name}.vue`,
-        import.meta.glob("../views/Pages/**/*.vue") as Record<
+        `./Pages/${name}.vue`,
+
+        import.meta.glob("./Pages/**/*.vue") as Record<
             string,
             () => Promise<DefineComponent>
         >
